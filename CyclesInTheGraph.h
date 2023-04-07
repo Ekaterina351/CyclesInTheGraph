@@ -15,6 +15,18 @@ struct Vertex {
 };
 
 
+class InvalidGraphAssignment : public std::exception {
+public:
+	explicit InvalidGraphAssignment(const std::string& message) : m_message(message) {}
+
+	const char* what() const noexcept override {
+		return m_message.c_str();
+	}
+private:
+	std::string m_message;
+};
+
+
 std::string getCorrectCycleName(const std::vector<Vertex*>& cycle);
 
 
@@ -26,6 +38,9 @@ bool findCycles(const std::vector<Vertex*>& graph, std::map<std::string, std::ve
 
 
 Vertex* findVertexInGraph(const std::string& vertexName, const std::vector<Vertex*>& graph);
+
+
+void strip(std::string& str, const char* stripBy = " \t\n\v\f\r");
 
 
 void readCSVFile(const std::string& input_file_path, std::vector<Vertex*>& graph, const char delimiter = ';');
