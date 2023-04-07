@@ -5,28 +5,81 @@
 #include "CyclesInTheGraph.h"
 
 
-int main()
+int main(int argc, char* argv[])
 {
-	Vertex* v1 = new Vertex("1");
-	Vertex* v2 = new Vertex("2");
-	Vertex* v3 = new Vertex("3");
-	v1->adjacentVertices.push_back(v2);
-	v2->adjacentVertices.push_back(v1);
-	v2->adjacentVertices.push_back(v3);
-	v3->adjacentVertices.push_back(v1);
-	std::vector<Vertex*> input_graph = { v1, v2, v3 };
+	setlocale(LC_ALL, "Russian");
 
-	std::map<std::string, std::vector<Vertex*>> cycles;
-	bool search_res = findCycles(input_graph, cycles);
-	cout << search_res << "\n";
+	// Если указано неверное количество аргементов командной строки
+	if (argc != 3)
+	{
+		std::cerr << "Неправильно указаны параметры запуска. "
+			"Убедитесь, что параметры соотвествуют шаблону: \n"
+			<< argv[0] << " <path/to/input_file.csv> <path/to/output_file.txt>\n";
+		return 1;
+	}
 
+	std::ifstream input_file(argv[1]);
+
+	// Если не удалось открыть файл с входными данными
+	if (!input_file.is_open()) {
+		std::cerr << "Неверно указан файл с входными данными. Возможно, файл не существует." << argv[1] << '\n';
+		return 1;
+	}
+
+	filesystem::path output_path = filesystem::path(argv[2]);
+
+	// Если не удалось определить путь для выходного файла
+	if (!(filesystem::exists(output_path.parent_path()) &&
+		filesystem::is_directory(output_path.parent_path()) &&
+		output_path.has_filename()))
+	{
+		std::cerr << "Неверно указан файл для выходных данных. "
+			"Возможно указанного расположения не существует или нет прав на запись." << '\n';
+		return 1;
+	}
+	std::ofstream output_file(output_path);
+
+	// Если не удалось открыть файл для записи выходных данных
+	if (!output_file.is_open()) {
+		std::cerr << "Неверно указан файл для выходных данных. "
+			"Возможно указанного расположения не существует или нет прав на запись." << '\n';
+		return 1;
+	}
+
+	std::vector<Vertex*> graph;
+	try {
+		// Считываем и валидируем матрицу смежностей
+		readCSVFile(argv[1], graph);
+	}
+	catch (const InvalidGraphAssignment& e) {
+		std::cerr << e.what();
+		return 1;
+	}
+
+	std::map<std::string, vector<Vertex*>> cycles;
+
+	// Находим все уникальные циклы в графе и 
+	// выводим результат поиска в файл
+	if (findCycles(graph, cycles)) {
+		output_file << "True" << '\n';
+	}
+	else {
+		output_file << "False" << '\n';
+	}
+
+	// Выводим найденные циклы в файл
 	for (const auto& [cycleName, cycleVector] : cycles) {
 		for (int j = 0; j < cycleVector.size(); j++) {
-			cout << cycleVector[j]->name;
-			if (j < cycleVector.size() - 1) cout << '-';
+			output_file << cycleVector[j]->name;
+			if (j < cycleVector.size() - 1) output_file << '-';
 		}
-		cout << '\n';
+		output_file << '\n';
 	}
+	// Закрыть файлы
+	input_file.close();
+	output_file.close();
+
+	return 0;
 }
 
 
