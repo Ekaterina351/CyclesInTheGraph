@@ -191,7 +191,7 @@ void strip(std::string& str, const char* stripBy) {
 }
 
 
-void readCSVFile(const std::string& input_file_path, std::vector<Vertex*>& graph, const char delimiter = ';') {
+void readCSVFile(const std::string& input_file_path, std::vector<Vertex*>& graph, const char delimiter) {
 	// Открываем файл
 	std::ifstream input_file(input_file_path); // Закрывать не надо, т.к. после завершения функции закроется автоматом
 
