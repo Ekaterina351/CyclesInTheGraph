@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_findCycles", "Test_fin
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_dfs", "Test_dfs\Test_dfs.vcxproj", "{0335F973-6B99-4AF4-A823-C9576931254D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_getCorrectCycleName", "Test_getCorrectCycleName\Test_getCorrectCycleName.vcxproj", "{3E3C19B7-990E-4A9E-850A-43908696B7A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{0335F973-6B99-4AF4-A823-C9576931254D}.Release|x64.Build.0 = Release|x64
 		{0335F973-6B99-4AF4-A823-C9576931254D}.Release|x86.ActiveCfg = Release|Win32
 		{0335F973-6B99-4AF4-A823-C9576931254D}.Release|x86.Build.0 = Release|Win32
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Debug|x64.ActiveCfg = Debug|x64
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Debug|x64.Build.0 = Debug|x64
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Debug|x86.ActiveCfg = Debug|Win32
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Debug|x86.Build.0 = Debug|Win32
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Release|x64.ActiveCfg = Release|x64
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Release|x64.Build.0 = Release|x64
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Release|x86.ActiveCfg = Release|Win32
+		{3E3C19B7-990E-4A9E-850A-43908696B7A3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
