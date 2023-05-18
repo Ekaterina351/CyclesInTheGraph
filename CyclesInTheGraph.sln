@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_getCorrectCycleName", 
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_findVertexInGraph", "Test_findVertexInGraph\Test_findVertexInGraph.vcxproj", "{EB7384BB-7A36-496E-8099-051E9E9C37BF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test_readCSVFile", "Test_readCSVFile\Test_readCSVFile.vcxproj", "{816F74AD-D208-41B3-A076-DA9E60E69511}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{EB7384BB-7A36-496E-8099-051E9E9C37BF}.Release|x64.Build.0 = Release|x64
 		{EB7384BB-7A36-496E-8099-051E9E9C37BF}.Release|x86.ActiveCfg = Release|Win32
 		{EB7384BB-7A36-496E-8099-051E9E9C37BF}.Release|x86.Build.0 = Release|Win32
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Debug|x64.ActiveCfg = Debug|x64
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Debug|x64.Build.0 = Debug|x64
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Debug|x86.ActiveCfg = Debug|Win32
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Debug|x86.Build.0 = Debug|Win32
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Release|x64.ActiveCfg = Release|x64
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Release|x64.Build.0 = Release|x64
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Release|x86.ActiveCfg = Release|Win32
+		{816F74AD-D208-41B3-A076-DA9E60E69511}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
