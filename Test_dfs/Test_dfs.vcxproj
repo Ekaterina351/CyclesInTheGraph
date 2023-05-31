@@ -239,6 +239,11 @@
   <ItemGroup>
     <ClInclude Include="pch.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CyclesInTheGraph\CyclesInTheGraph.vcxproj">
+      <Project>{a20b653b-58ed-49a7-bd8a-85d0fb7b3655}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

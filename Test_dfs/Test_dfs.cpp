@@ -20,7 +20,6 @@ namespace Testdfs
 			v2->adjacentVertices = { v1, v3 };
 			v3->adjacentVertices = { v1 };
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {
 				{"12", {}}, {"13", {}}
 			};
@@ -29,7 +28,7 @@ namespace Testdfs
 			bool exp_search_res = true;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
@@ -39,14 +38,13 @@ namespace Testdfs
 		{
 			Vertex* v1 = new Vertex("1");
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {};
 
 			std::string exp_name = "";
 			bool exp_search_res = false;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
@@ -60,14 +58,13 @@ namespace Testdfs
 			v2->adjacentVertices = { v1, v3 };
 			v3->adjacentVertices = { v1 };
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {};
 
 			std::string exp_name = "";
 			bool exp_search_res = false;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
@@ -82,7 +79,6 @@ namespace Testdfs
 			v2->adjacentVertices = { v1, v3 };
 			v3->adjacentVertices = { v1 };
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {
 				{"12", {}}
 			};
@@ -91,7 +87,7 @@ namespace Testdfs
 			bool exp_search_res = true;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
@@ -106,14 +102,13 @@ namespace Testdfs
 			v2->adjacentVertices = { v1, v3 };
 			v3->adjacentVertices = { v1 };
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {};
 
 			std::string exp_name = "13";
 			bool exp_search_res = true;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
@@ -128,7 +123,6 @@ namespace Testdfs
 			v2->adjacentVertices = { v1, v3 };
 			v3->adjacentVertices = { v1 };
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {
 				{"12", {}}, {"13", {}}, {"123", {}}
 			};
@@ -137,7 +131,7 @@ namespace Testdfs
 			bool exp_search_res = false;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
@@ -152,14 +146,13 @@ namespace Testdfs
 			v2->adjacentVertices = { v1, v3 };
 			v3->adjacentVertices = { v1 };
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {};
 
 			std::set<std::string> exp_names = { "12", "13", "123" };
 			bool exp_search_res = true;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
@@ -178,7 +171,6 @@ namespace Testdfs
 			v2->adjacentVertices = { v1, v3 };
 			v3->adjacentVertices = { v1 };
 
-			std::set<Vertex*> input_visited;
 			std::map<std::string, std::vector<Vertex*>> input_cycles = {
 				{"12", {}}, {"123", {}}, {"13", {}}
 			};
@@ -187,7 +179,7 @@ namespace Testdfs
 			bool exp_search_res = true;
 
 			std::vector<Vertex*> res_recStack;
-			bool search_res = dfs(v1, res_recStack, input_visited, input_cycles);
+			bool search_res = dfs(v1, res_recStack, input_cycles);
 			std::string res_name = getCorrectCycleName(res_recStack);
 
 			Assert::AreEqual(exp_search_res, search_res);
