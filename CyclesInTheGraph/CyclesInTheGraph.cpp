@@ -98,19 +98,21 @@ std::string getCorrectCycleName(const std::vector<Vertex*>& cycle) {
 }
 
 
-bool dfs(Vertex* viewedVertex, std::vector<Vertex*>& recStack, std::set<Vertex*> visited,
-	const std::map<std::string, std::vector<Vertex*>>& cycles) {
-	// Помещаем вершину в массив посещенных
-	visited.insert(viewedVertex);
+bool dfs(Vertex* viewedVertex, std::vector<Vertex*>& recStack, const std::map<std::string, std::vector<Vertex*>>& cycles) {
+	// Помечаем вершину как посещенную
+	viewedVertex->visited = true;
 	// Добавляем текущую вершину в массив с формируемым циклом
 	recStack.push_back(viewedVertex);
 
 	// Для каждлой смежной вершины у просматриваемой вершины
 	for (Vertex* v : viewedVertex->adjacentVertices) {
 		// Если смежную вершину еще не посещали
-		if (!visited.contains(v)) {
+		if (!v->visited) {
 			// Запускаем алгоритм поиска в глубину для смежной вершины
-			if (dfs(v, recStack, visited, cycles)) {
+			if (dfs(v, recStack, cycles)) {
+				// Снимаем пометку о посещении вершины 
+				viewedVertex->visited = false;
+
 				// Если нашли цикл, то возвращаем истину
 				return true;
 			}
@@ -120,6 +122,9 @@ bool dfs(Vertex* viewedVertex, std::vector<Vertex*>& recStack, std::set<Vertex*>
 		else if (v == recStack[0]) {
 			// Если ранее цикл с таким же правильным именем не находили
 			if (!cycles.contains(getCorrectCycleName(recStack))) {
+				// Снимаем пометку о песещении вершины 
+				viewedVertex->visited = false;
+
 				// Считаем, что нашли новый цикл и возвращаем истину
 				return true;
 			}
@@ -128,7 +133,7 @@ bool dfs(Vertex* viewedVertex, std::vector<Vertex*>& recStack, std::set<Vertex*>
 	// Если цикл не нашли, то удаляем вершину из массива с формируемым циклом 
 	// и снимаем пометку о ее песещении
 	recStack.pop_back();
-	visited.erase(viewedVertex);
+	viewedVertex->visited = false;
 
 	// Возвращаем ложь, т.к. цикл не нашли
 	return false;
@@ -138,7 +143,6 @@ bool dfs(Vertex* viewedVertex, std::vector<Vertex*>& recStack, std::set<Vertex*>
 bool findCycles(const std::vector<Vertex*>& graph, std::map<std::string, std::vector<Vertex*>>& cycles) {
 	// Определить массив для хранения возможного цикла и массив посещенных вершин
 	std::vector<Vertex*> recStack;
-	std::set<Vertex*> visited;
 
 	bool isAnyCycleFound = false; // Считаем, что ни один цикл не найден
 
@@ -146,7 +150,7 @@ bool findCycles(const std::vector<Vertex*>& graph, std::map<std::string, std::ve
 	for (Vertex* v : graph) {
 		// Пока возможно найти уникальный цикл у рассматриваемой вершины 
 		// с помощью алгоритма поиска в глубину
-		while (dfs(v, recStack, visited, cycles)) {
+		while (dfs(v, recStack, cycles)) {
 			// Добавляем цикл в массив найденных циклов
 			std::string cycleName = getCorrectCycleName(recStack);
 
@@ -159,9 +163,7 @@ bool findCycles(const std::vector<Vertex*>& graph, std::map<std::string, std::ve
 			// Очищаем массив для хранения возможного цикла перед поиском 
 			// нового уникального цикла для рассматриваемой вершины
 			recStack.clear();
-			visited.clear();
 		}
-		visited.clear();
 	}
 	// Возвращаем результат поиска цикла в графе
 	return isAnyCycleFound;

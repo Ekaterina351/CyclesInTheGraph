@@ -10,6 +10,8 @@ using namespace std;
 struct Vertex {
 	std::string name;
 	std::vector<Vertex*> adjacentVertices;
+	bool visited = false;
+
 
 	explicit Vertex(const std::string& vertexName) : name(vertexName) {}
 };
@@ -42,7 +44,7 @@ std::string getCorrectCycleName(const std::vector<Vertex*>& cycle);
 * \param[in] cycles - массив с найденными циклами.
 * \return 0 - если цикл не найден. 1 - если цикл найден.
 */
-bool dfs(Vertex* viewedVertex, std::vector<Vertex*>& recStack, std::set<Vertex*> visited, 
+bool dfs(Vertex* viewedVertex, std::vector<Vertex*>& recStack,
 	const std::map<std::string, std::vector<Vertex*>>& cycles);
 
 
