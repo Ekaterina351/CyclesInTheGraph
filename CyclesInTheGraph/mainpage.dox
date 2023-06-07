@@ -1,0 +1,182 @@
+/*!
+ * \mainpage ќпределение наличи€ в графе циклов.
+ * \author ћикулина ≈катерина ≈вгеньевна
+ * \details
+ * ѕрограмма предназначена дл€ нахождени€ всевозможных уникальных циклов в заданном графе. 
+ * <h2><b> ‘ормат входных данных</b></h2>
+ * ¬ходные данные представл€ютс€ в виде одного текстового файла с расширением .csv. 
+ ƒанные представл€ют собой матрицу смежностей размером NxM, разделителем €чеек в 
+ строке которой €вл€ет символ У;Ф, а кажда€ строка таблицы €вл€етс€ новой строкой в 
+ файле (т.н. формат MS-DOS). ќписание ограничений и правил оформлени€ матрицы 
+ смежности содержитс€ в “ехническом задании в пункт 2.1.  
+ * <h2><b> Cодержание выходного файла </b></h2>
+ * ¬ыходной файл должен быть текстовым файлом с расширением .txt. ќн должен 
+ иметь следующий вид: перва€ строка Ц результат поиска циклов в графе 
+ (УFalseФ или УTrueФ). ѕри выводе УTrueФ означает, что цикл в графе имеетс€, 
+ а при выводе УFalseФ, что цикл в графе не найден. ѕоследующие строки Ц 
+ найденные циклы в графе. „ерез символ У-У указываютс€ вход€щие в цикл вершины.
+ * <h2><b> ѕримеры работы программы </b></h2>
+ <center>
+ <table>
+ <tr>
+ <th>√рафическое изображение графа</th>
+ <th>ћатрица смежности</th>
+ <th>–езультат программы</th>
+ </tr>
+
+ <tr>
+    <td><center><img src="example1.png"></center></td>
+    <td>
+        <tt>
+            <table>
+                <tr>
+                    <td><tt></tt></td>
+                    <td><tt>X1</tt></td>
+                    <td><tt>X2</tt></td>
+                    <td><tt>X3</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X2</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>1</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X3</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+            </table>
+        </tt>
+    </td>
+    <td>
+        <tt>
+            True<br>X1-X2-X3-X1
+        </tt>
+    </td>
+ </tr>
+  <tr>
+    <td><center><img src="example2.png"></center></td>
+    <td>
+        <tt>
+            <table>
+                <tr>
+                    <td><tt></tt></td>
+                    <td><tt>X1</tt></td>
+                    <td><tt>X2</tt></td>
+                    <td><tt>X3</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X2</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>1</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X3</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+            </table>
+        </tt>
+    </td>
+    <td>
+        <tt>
+            True<br>X1-X2-X1<br>X1-X2-X3-X1
+        </tt>
+    </td>
+ </tr>
+ <tr>
+    <td><center><img src="example3.png"></center></td>
+    <td>
+        <tt>
+            <table>
+                <tr>
+                    <td><tt></tt></td>
+                    <td><tt>X1</tt></td>
+                    <td><tt>X2</tt></td>
+                    <td><tt>X3</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>1</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X2</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>1</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X3</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>1</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+            </table>
+        </tt>
+    </td>
+    <td>
+        <tt>
+            True<br>X1-X2-X1<br>X1-X3-X1<br>X2-X3-X2<br>X1-X2-X3-X1
+        </tt>
+    </td>
+    
+ </tr>
+ <tr>
+    <td><center><img src="example4.png"></center></td>
+    <td>   
+        <tt>
+            <table>
+                <tr>
+                    <td><tt></tt></td>
+                    <td><tt>X1</tt></td>
+                    <td><tt>X2</tt></td>
+                    <td><tt>X3</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X1</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X2</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+                <tr>
+                    <td><tt>X3</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                    <td><tt>0</tt></td>
+                </tr>
+            </table>
+        </tt>
+    </td>
+    <td>
+        <tt>
+            False
+        </tt>
+    </td>
+ </tr>
+ </table>
+ </center>
+*/
