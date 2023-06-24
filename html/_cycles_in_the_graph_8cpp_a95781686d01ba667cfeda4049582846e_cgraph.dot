@@ -1,0 +1,10 @@
+digraph "dfs"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="dfs",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node0 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="getCorrectCycleName",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_cycles_in_the_graph_8cpp.html#afc9b7ad81ad9ce712523bbc58b777755"];
+}

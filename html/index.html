@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CyclesInTheGraph: Определение наличия в графе циклов.</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="icon64x64.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CyclesInTheGraph
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Определение наличия в графе циклов. </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><dl class="section author"><dt>Автор</dt><dd>Микулина Екатерина Евгеньевна</dd></dl>
+<p>Программа предназначена для нахождения всевозможных уникальных циклов в заданном графе. </p><h2><b> Формат входных данных</b></h2>
+<p>Входные данные представляются в виде одного текстового файла с расширением .csv. Данные представляют собой матрицу смежностей размером NxM, разделителем ячеек в строке которой являет символ “;”, а каждая строка таблицы является новой строкой в файле (т.н. формат MS-DOS). Описание ограничений и правил оформления матрицы смежности содержится в Техническом задании в пункт 2.1. <br  />
+ </p><h2><b> Cодержание выходного файла </b></h2>
+<p>Выходной файл должен быть текстовым файлом с расширением .txt. Он должен иметь следующий вид: первая строка – результат поиска циклов в графе (“False” или “True”). При выводе “True” означает, что цикл в графе имеется, а при выводе “False”, что цикл в графе не найден. Последующие строки – найденные циклы в графе. Через символ “-“ указываются входящие в цикл вершины. </p><h2><b> Примеры работы программы </b></h2>
+<center> <table class="doxtable">
+<tr>
+<th>Графическое изображение графа </th><th>Матрица смежности </th><th><p class="starttd">Результат программы </p>
+<p class="endtd"></p>
+</th></tr>
+<tr>
+<td><center><img src="example1.png" alt="" class="inline"/></center> </td><td><code> <table class="doxtable">
+<tr>
+<td><code></code> </td><td><code>X1</code> </td><td><code>X2</code> </td><td><code>X3</code>  </td></tr>
+<tr>
+<td><code>X1</code> </td><td><code>0</code> </td><td><code>1</code> </td><td><code>0</code>  </td></tr>
+<tr>
+<td><code>X2</code> </td><td><code>0</code> </td><td><code>0</code> </td><td><code>1</code>  </td></tr>
+<tr>
+<td><code>X3</code> </td><td><code>1</code> </td><td><code>0</code> </td><td><code>0</code>  </td></tr>
+</table>
+</code>  </td><td><code> True<br  />
+X1-X2-X3-X1 </code>   </td></tr>
+<tr>
+<td><center><img src="example2.png" alt="" class="inline"/></center> </td><td><code> <table class="doxtable">
+<tr>
+<td><code></code> </td><td><code>X1</code> </td><td><code>X2</code> </td><td><code>X3</code>  </td></tr>
+<tr>
+<td><code>X1</code> </td><td><code>0</code> </td><td><code>1</code> </td><td><code>0</code>  </td></tr>
+<tr>
+<td><code>X2</code> </td><td><code>1</code> </td><td><code>0</code> </td><td><code>1</code>  </td></tr>
+<tr>
+<td><code>X3</code> </td><td><code>1</code> </td><td><code>0</code> </td><td><code>0</code>  </td></tr>
+</table>
+</code>  </td><td><code> True<br  />
+X1-X2-X1<br  />
+X1-X2-X3-X1 </code>   </td></tr>
+<tr>
+<td><center><img src="example3.png" alt="" class="inline"/></center> </td><td><code> <table class="doxtable">
+<tr>
+<td><code></code> </td><td><code>X1</code> </td><td><code>X2</code> </td><td><code>X3</code>  </td></tr>
+<tr>
+<td><code>X1</code> </td><td><code>0</code> </td><td><code>1</code> </td><td><code>1</code>  </td></tr>
+<tr>
+<td><code>X2</code> </td><td><code>1</code> </td><td><code>0</code> </td><td><code>1</code>  </td></tr>
+<tr>
+<td><code>X3</code> </td><td><code>1</code> </td><td><code>1</code> </td><td><code>0</code>  </td></tr>
+</table>
+</code>  </td><td><p class="starttd"><code> True<br  />
+X1-X2-X1<br  />
+X1-X3-X1<br  />
+X2-X3-X2<br  />
+X1-X2-X3-X1 </code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td><center><img src="example4.png" alt="" class="inline"/></center> </td><td><br  />
+ <code> <table class="doxtable">
+<tr>
+<td><code></code> </td><td><code>X1</code> </td><td><code>X2</code> </td><td><code>X3</code>  </td></tr>
+<tr>
+<td><code>X1</code> </td><td><code>0</code> </td><td><code>0</code> </td><td><code>0</code>  </td></tr>
+<tr>
+<td><code>X2</code> </td><td><code>0</code> </td><td><code>0</code> </td><td><code>0</code>  </td></tr>
+<tr>
+<td><code>X3</code> </td><td><code>0</code> </td><td><code>0</code> </td><td><code>0</code>  </td></tr>
+</table>
+</code>  </td><td><code> False </code>   </td></tr>
+</table>
+</center> </div></div><!-- PageDoc -->
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>

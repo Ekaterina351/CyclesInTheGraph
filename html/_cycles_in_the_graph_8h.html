@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.7"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CyclesInTheGraph: Файл CyclesInTheGraph/CyclesInTheGraph.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="icon64x64.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">CyclesInTheGraph
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.7 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_3d45f47d24999155fa38046aa3f0a407.html">CyclesInTheGraph</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a>  </div>
+  <div class="headertitle"><div class="title">Файл CyclesInTheGraph.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+</div>
+<p><a href="_cycles_in_the_graph_8h_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_vertex.html">Vertex</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_invalid_graph_assignment.html">InvalidGraphAssignment</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a10f481d35ef61acbb243d99d13ed2195"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cycles_in_the_graph_8h.html#a10f481d35ef61acbb243d99d13ed2195">getCorrectCycleName</a> (const std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;cycle)</td></tr>
+<tr class="separator:a10f481d35ef61acbb243d99d13ed2195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c8a8ab2e3894d07e0d222e043c8fe88"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cycles_in_the_graph_8h.html#a5c8a8ab2e3894d07e0d222e043c8fe88">dfs</a> (<a class="el" href="struct_vertex.html">Vertex</a> *viewedVertex, std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;recStack, const std::map&lt; std::string, std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &gt; &amp;cycles)</td></tr>
+<tr class="separator:a5c8a8ab2e3894d07e0d222e043c8fe88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad886fcb005677253bc0824ba4062b973"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cycles_in_the_graph_8h.html#ad886fcb005677253bc0824ba4062b973">findCycles</a> (const std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;graph, std::map&lt; std::string, std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &gt; &amp;cycles)</td></tr>
+<tr class="separator:ad886fcb005677253bc0824ba4062b973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c5c1feaf948876b8e66620a9f7bb88d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vertex.html">Vertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cycles_in_the_graph_8h.html#a3c5c1feaf948876b8e66620a9f7bb88d">findVertexInGraph</a> (const std::string &amp;vertexName, const std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;graph)</td></tr>
+<tr class="separator:a3c5c1feaf948876b8e66620a9f7bb88d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0af25180816f417c3ebcff4b2a2f7ea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cycles_in_the_graph_8h.html#a0af25180816f417c3ebcff4b2a2f7ea3">strip</a> (std::string &amp;str, const char *stripBy=&quot; \t\n\v\f\r&quot;)</td></tr>
+<tr class="separator:a0af25180816f417c3ebcff4b2a2f7ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5612f3cead4cc2ed00436e373336c162"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cycles_in_the_graph_8h.html#a5612f3cead4cc2ed00436e373336c162">readCSVFile</a> (const std::string &amp;input_file_path, std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;graph, const char delimiter=';')</td></tr>
+<tr class="separator:a5612f3cead4cc2ed00436e373336c162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a5c8a8ab2e3894d07e0d222e043c8fe88" name="a5c8a8ab2e3894d07e0d222e043c8fe88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c8a8ab2e3894d07e0d222e043c8fe88">&#9670;&#160;</a></span>dfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool dfs </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_vertex.html">Vertex</a> *&#160;</td>
+          <td class="paramname"><em>viewedVertex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>recStack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::map&lt; std::string, std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cycles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Определить наличие цикла для указанной вершины, используя алгоритм поиска в глубину. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">viewedVertex</td><td>- рассматриваемая вершина. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">recStack</td><td>- массив для промежуточного хранения цикла. // TODO убарть</td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">visited</td><td>- массив для хранения просмотренных вершин. std::set&lt;Vertex*&gt; visited </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cycles</td><td>- массив с найденными циклами. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 - если цикл не найден. 1 - если цикл найден. </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_cgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_cgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_cgraph" id="a_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_cgraph">
+<area shape="rect" title=" " alt="" coords="13,29,51,56"/>
+<area shape="poly" title=" " alt="" coords="11,33,4,23,5,13,15,5,32,3,54,7,61,18,57,21,51,12,32,8,17,10,10,15,9,22,15,30"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a10f481d35ef61acbb243d99d13ed2195" title=" " alt="" coords="99,29,248,56"/>
+<area shape="poly" title=" " alt="" coords="52,40,84,40,84,45,52,45"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_icgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_icgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_icgraph" id="a_cycles_in_the_graph_8h_a5c8a8ab2e3894d07e0d222e043c8fe88_icgraph">
+<area shape="rect" title=" " alt="" coords="232,29,270,56"/>
+<area shape="poly" title=" " alt="" coords="269,16,263,10,251,8,241,10,235,14,234,20,237,28,232,30,228,20,231,11,238,5,251,3,265,6,272,13"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#ad886fcb005677253bc0824ba4062b973" title=" " alt="" coords="103,29,184,56"/>
+<area shape="poly" title=" " alt="" coords="217,45,185,45,185,40,217,40"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,29,55,56"/>
+<area shape="poly" title=" " alt="" coords="88,45,55,45,55,40,88,40"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad886fcb005677253bc0824ba4062b973" name="ad886fcb005677253bc0824ba4062b973"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad886fcb005677253bc0824ba4062b973">&#9670;&#160;</a></span>findCycles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool findCycles </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; std::string, std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cycles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Поиск всех уникальных циклов в графе. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">graph</td><td>- массив с вершинами (граф), в котором идет поиск. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cycles</td><td>- массив с найденными циклами. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>0 - если цикл не найден. 1 - если цикл найден. </dd></dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_cgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_cgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_cgraph" id="a_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_cgraph">
+<area shape="rect" title=" " alt="" coords="5,55,87,81"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a5c8a8ab2e3894d07e0d222e043c8fe88" title=" " alt="" coords="135,29,173,56"/>
+<area shape="poly" title=" " alt="" coords="86,56,120,48,121,53,88,61"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a10f481d35ef61acbb243d99d13ed2195" title=" " alt="" coords="221,55,369,81"/>
+<area shape="poly" title=" " alt="" coords="87,65,206,65,206,71,87,71"/>
+<area shape="poly" title=" " alt="" coords="134,30,131,20,133,11,141,5,154,3,168,6,175,13,171,16,165,10,154,8,143,10,138,14,136,20,139,28"/>
+<area shape="poly" title=" " alt="" coords="174,43,207,49,206,55,173,49"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_icgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_icgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_icgraph" id="a_cycles_in_the_graph_8h_ad886fcb005677253bc0824ba4062b973_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,184,32"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="88,21,55,21,55,16,88,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3c5c1feaf948876b8e66620a9f7bb88d" name="a3c5c1feaf948876b8e66620a9f7bb88d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c5c1feaf948876b8e66620a9f7bb88d">&#9670;&#160;</a></span>findVertexInGraph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_vertex.html">Vertex</a> * findVertexInGraph </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>vertexName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Найти первую вершину с указанным названием в графе. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertexName</td><td>- название искомой вершины. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">graph</td><td>- массив с вершинами (граф), в котором идет поиск. return найденная вершина или нулевой указатель </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_a3c5c1feaf948876b8e66620a9f7bb88d_icgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_a3c5c1feaf948876b8e66620a9f7bb88d_icgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_a3c5c1feaf948876b8e66620a9f7bb88d_icgraph" id="a_cycles_in_the_graph_8h_a3c5c1feaf948876b8e66620a9f7bb88d_icgraph">
+<area shape="rect" title=" " alt="" coords="245,5,369,32"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#ad7909d73a1587560ab5790d1163ab92f" title=" " alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="230,21,198,21,198,16,230,16"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="88,21,55,21,55,16,88,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a10f481d35ef61acbb243d99d13ed2195" name="a10f481d35ef61acbb243d99d13ed2195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f481d35ef61acbb243d99d13ed2195">&#9670;&#160;</a></span>getCorrectCycleName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string getCorrectCycleName </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>cycle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Получить правильное имя цикла. Правильное имя состоит из строки, полученной при конкатенации имен каждой вершины, и сортировки полученной строки в алфавитном порядке. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cycle</td><td>- цикл, для которого необходимо получить правильное имя. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>правильное имя цикла. </dd></dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_a10f481d35ef61acbb243d99d13ed2195_icgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_a10f481d35ef61acbb243d99d13ed2195_icgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_a10f481d35ef61acbb243d99d13ed2195_icgraph" id="a_cycles_in_the_graph_8h_a10f481d35ef61acbb243d99d13ed2195_icgraph">
+<area shape="rect" title=" " alt="" coords="318,55,467,81"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a5c8a8ab2e3894d07e0d222e043c8fe88" title=" " alt="" coords="232,29,270,56"/>
+<area shape="poly" title=" " alt="" coords="303,55,271,49,271,43,304,49"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#ad886fcb005677253bc0824ba4062b973" title=" " alt="" coords="103,55,184,81"/>
+<area shape="poly" title=" " alt="" coords="304,71,184,71,184,65,304,65"/>
+<area shape="poly" title=" " alt="" coords="269,16,263,10,251,8,241,10,235,14,234,20,237,28,232,30,228,20,231,11,238,5,251,3,265,6,272,13"/>
+<area shape="poly" title=" " alt="" coords="218,53,185,61,184,56,217,48"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,55,55,81"/>
+<area shape="poly" title=" " alt="" coords="88,71,55,71,55,65,88,65"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5612f3cead4cc2ed00436e373336c162" name="a5612f3cead4cc2ed00436e373336c162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5612f3cead4cc2ed00436e373336c162">&#9670;&#160;</a></span>readCSVFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void readCSVFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>input_file_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="struct_vertex.html">Vertex</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>graph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>delimiter</em> = <code>';'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Прочитывает входные данные из CSV файла, на их основе создает вершины <a class="el" href="struct_vertex.html">Vertex</a> и сохраняет их в массив graph. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">input_file_path</td><td>- строка с путем к файлу с входными данными. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">graph</td><td>- массив с вершинами. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">delimiter</td><td>- разделитель элементов в строке, использующийся в CSV файле. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызовов:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_cgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_cgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_cgraph" id="a_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,100,57"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a3c5c1feaf948876b8e66620a9f7bb88d" title=" " alt="" coords="148,5,272,32"/>
+<area shape="poly" title=" " alt="" coords="100,34,133,28,134,34,101,39"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a4351c36edc6d465b6ed190b17c407f3e" title=" " alt="" coords="187,56,233,83"/>
+<area shape="poly" title=" " alt="" coords="101,49,172,61,171,66,100,54"/>
+</map>
+</div>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_icgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_icgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_icgraph" id="a_cycles_in_the_graph_8h_a5612f3cead4cc2ed00436e373336c162_icgraph">
+<area shape="rect" title=" " alt="" coords="103,5,197,32"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="88,21,55,21,55,16,88,16"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0af25180816f417c3ebcff4b2a2f7ea3" name="a0af25180816f417c3ebcff4b2a2f7ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af25180816f417c3ebcff4b2a2f7ea3">&#9670;&#160;</a></span>strip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void strip </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>stripBy</em> = <code>&quot;&#160;\t\n\v\f\r&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Удалить перечисленные символы и слева и справа от строки. </p><dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">str</td><td>строка из которой удаляют крайние правые и левые символы. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stripBy</td><td>список удаляемых символов справа от строки. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="_cycles_in_the_graph_8h_a0af25180816f417c3ebcff4b2a2f7ea3_icgraph.png" border="0" usemap="#a_cycles_in_the_graph_8h_a0af25180816f417c3ebcff4b2a2f7ea3_icgraph" alt=""/></div>
+<map name="a_cycles_in_the_graph_8h_a0af25180816f417c3ebcff4b2a2f7ea3_icgraph" id="a_cycles_in_the_graph_8h_a0af25180816f417c3ebcff4b2a2f7ea3_icgraph">
+<area shape="rect" title=" " alt="" coords="245,5,291,32"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#ad7909d73a1587560ab5790d1163ab92f" title=" " alt="" coords="103,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="230,21,197,21,197,16,230,16"/>
+<area shape="rect" href="_cycles_in_the_graph_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" title=" " alt="" coords="88,21,55,21,55,16,88,16"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+</small></address>
+</body>
+</html>
